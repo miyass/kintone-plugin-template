@@ -6,7 +6,6 @@ fs.readdir("dist", (err, files) => {
     if (file.indexOf(".ppk") !== -1) {
       fs.rename(`dist/${file}`, "dist/private.ppk", (error) => {
         if (error) throw error;
-        console.log("ppkファイルをprivate.ppkに変更しました！");
       });
     }
   });
