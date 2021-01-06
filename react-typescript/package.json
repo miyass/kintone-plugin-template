@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node scripts/npm-start.js",
-    "prepare": "run-s build:prod package:plugin rename:ppk",
+    "prepare": "run-s build:prod package:dev_plugin rename:ppk",
     "build:prod": "webpack --config webpack.config.js",
     "build:dev": "webpack --config webpack.config.dev.js",
     "watch": "webpack --config webpack.config.dev.js --watch",
-    "package:plugin": "kintone-plugin-packer --out dist/plugin.zip .",
+    "build:plugin": "run-s build:prod package:prod_plugin",
+    "package:prod_plugin": "kintone-plugin-packer --ppk dist/private.ppk --out dist/plugin.zip .",
+    "package:dev_plugin": "kintone-plugin-packer --out dist/plugin.zip .",
     "upload:plugin": "kintone-plugin-uploader dist/plugin.zip --watch --waiting-dialog-ms 3000",
     "rename:ppk": "node scripts/rename-ppk.js"
   },
