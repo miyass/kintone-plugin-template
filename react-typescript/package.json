@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node scripts/npm-start.js",
-    "prepare:plugin": "run-s build:prod package:plugin rename:ppk",
+    "prepare": "run-s build:prod package:plugin rename:ppk",
     "build:prod": "webpack --config webpack.config.js",
     "build:dev": "webpack --config webpack.config.dev.js",
     "watch": "webpack --config webpack.config.dev.js --watch",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@cybozu/eslint-config": "^11.0.3",
+    "@kintone/dts-gen": "^3.1.0",
     "@kintone/plugin-packer": "^3.0.9",
     "@kintone/plugin-uploader": "^4.2.0",
     "@kintone/webpack-plugin-kintone-plugin": "^4.0.8",
