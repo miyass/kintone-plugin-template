@@ -29,5 +29,5 @@ module.exports = {
       privateKeyPath: "./dist/private.ppk",
       pluginZipPath: "./dist/plugin.zip",
     }),
-  ]
+  ],
 };
