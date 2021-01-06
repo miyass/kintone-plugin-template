@@ -1,0 +1,28 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "desktop": {
+    "js": [
+      "build/desktop.js"
+    ]
+  },
+  "mobile": {
+    "js": [
+      "build/mobile.js"
+    ]
+  },
+  "icon": "src/image/icon.png",
+  "config": {
+    "html": "src/config/html/index.html",
+    "js": [
+      "build/config.js"
+    ]
+  },
+  "name": {
+    "en": "react-typescript"
+  },
+  "description": {
+    "en": "react-typescript"
+  }
+}
