@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node scripts/npm-start.js",
-    "prepare": "run-s build:prod rename:ppk",
+    "prepare:plugin": "run-s build:prod package:plugin rename:ppk",
     "build:prod": "webpack --config webpack.config.js",
     "build:dev": "webpack --config webpack.config.dev.js",
     "watch": "webpack --config webpack.config.dev.js --watch",
