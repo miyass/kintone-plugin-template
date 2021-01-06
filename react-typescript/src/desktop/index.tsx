@@ -10,4 +10,7 @@ import { RecordHeader } from "./RecordHeader";
     ReactDOM.render(<RecordHeader />, header);
     return event;
   });
-})(kintone.$PLUGIN_ID);
+})(
+  // @ts-expect-error
+  kintone.$PLUGIN_ID
+);
